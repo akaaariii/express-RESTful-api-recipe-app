@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipes Index</title>
+  <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+  <h1>Recipes</h1>
+  <a class="btn-new-recipe" href="/api/recipes/new">+ New Recipe</a>
+  <div class="recipes">
+    <% for(let r of recipes){ %>
+      <div class="recipe-card">
+        <img src="<%= r.image_url %>" alt="<%= r.name %>">
+        <h3><a href="/api/recipes/<%= r.id %>"><%= r.name %></a></h3>
+      </div>
+    <% } %>
+  </div>
+</body>
+</html>

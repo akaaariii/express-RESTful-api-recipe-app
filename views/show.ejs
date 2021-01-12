@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show</title>
+  <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+  <h1>Recipe id: <%= recipe.id %></h1>
+  <div class="recipes">
+    <div class="recipe-card">
+      <img src="<%= recipe.image_url %>" alt="<%= recipe.name %>">
+      <h3><%= recipe.name %></a></h3>
+    </div>
+  </div>
+  <div class="return-home">
+    <a class="btn-home" href="/api/recipes">Return to Home</a>
+  </div>
+  <div class="edit-delete">
+    <a href="/api/recipes/<%= recipe.id %>/edit">Edit Recipe</a><br />
+    <form action="/api/recipes/<%= recipe.id %>?_method=DELETE" method="POST">
+      <button>Delete</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Recipe</title>
+  <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+  <h1>Edit Recipe</h1>
+  <form action="/api/recipes/<%= recipe.id %>?_method=PATCH" method="POST">
+    <section>
+      <label for="name">Enter Recipe: </label>
+      <input type="text" id="name" name="name" placeholder="recipe">
+    </section>
+    <section>
+      <label for="image_url">Enter image URL: </label>
+      <input type="text" id="image_url" name="image_url" placeholder="image URL">
+    </section>
+    <button>Save</button>
+  </form>
+</body>
+</html>

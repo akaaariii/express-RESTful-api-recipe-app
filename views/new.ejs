@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Recipe</title>
+  <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+  <h1>Make a new Recipe!</h1>
+  <form action="/api/recipes" method="POST">
+    <section>
+      <label for="name">Enter Recipe: </label>
+      <input type="text" id="name" name="name" placeholder="recipe">
+    </section>
+    <section>
+      <label for="image_url">Enter image URL: </label>
+      <input type="text" id="image_url" name="image_url" placeholder="image URL">
+    </section>
+    <button>Submit</button>
+  </form>
+  <div class="return-home">
+    <a class="btn-home" href="/api/recipes">Return to Home</a>
+  </div>
+</body>
+</html>
